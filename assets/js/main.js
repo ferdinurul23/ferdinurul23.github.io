@@ -1,6 +1,7 @@
 /**
  * MATERIAL DESIGN 3 (M3) INTERACTION ENGINE
  * Ferdi Nurul - Software Engineer (Mobile & Backend Specialist)
+ * Professional English Edition
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,7 +32,7 @@ function initThemeSystem() {
       const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       setTheme(newTheme);
-      showSnackbar(`Mode ${newTheme === 'dark' ? 'Gelap' : 'Terang'} diaktifkan`);
+      showSnackbar(`${newTheme === 'dark' ? 'Dark' : 'Light'} mode enabled`);
     });
   }
 
@@ -76,7 +77,7 @@ function initDynamicPalette() {
         }
         localStorage.setItem('m3-palette', palette);
         palettePopover.classList.remove('open');
-        showSnackbar(`Tema warna ${item.textContent.trim()} diterapkan!`);
+        showSnackbar(`${item.textContent.trim()} color theme applied!`);
       });
     });
   }
@@ -178,132 +179,132 @@ function initFilterChips() {
 }
 
 /* --------------------------------------------------------------------------
-   5. REAL GITHUB REPOSITORY PROJECT DETAILS
+   5. REAL GITHUB REPOSITORY PROJECT DETAILS (PROFESSIONAL ENGLISH)
    -------------------------------------------------------------------------- */
 const projectDetailsData = {
   sima: {
-    title: "Aplikasi USM SIMA (Sistem Informasi Manajemen Akademik)",
-    subtitle: "Aplikasi Mobile & Web Portal Akademik Universitas Semarang",
+    title: "USM SIMA Mobile App (Academic Management System)",
+    subtitle: "Native Android & Web Portal for Universitas Semarang Academic Ecosystem",
     image: "assets/img/siakad.jpg",
-    category: "Mobile & Sistem Kampus",
-    description: "Sistem Informasi Manajemen Akademik (SIMA) utama Universitas Semarang untuk memfasilitasi mahasiswa dan dosen dalam proses perkuliahan, pengisian KRS online, melihat KHS & Transkrip, serta jadwal ujian dan pengumuman kampus.",
+    category: "Mobile & Enterprise System",
+    description: "The core Academic Information Management System (SIMA) for Universitas Semarang. Serves thousands of active students and faculty members by streamlining course registrations (KRS), academic transcripts (KHS), real-time class timetables, and campus announcements.",
     features: [
-      "Modul KRS & KHS online interaktif dengan perhitungan IPK otomatis.",
-      "Jadwal kuliah, lokasi ruang, serta notifikasi presensi perkuliahan real-time.",
-      "Arsitektur Mobile Android berbasis Kotlin & Java dengan komunikasi REST API.",
-      "Integrasi sistem otentikasi akun tunggal (SSO) civitas akademika USM."
+      "Interactive mobile Course Registration (KRS) & automatic GPA calculation engine.",
+      "Real-time class schedule, room location mapping, and lecture attendance notifications.",
+      "Native Android architecture built with Kotlin & Java connecting to robust backend REST APIs.",
+      "Integrated Single Sign-On (SSO) authentication for campus-wide security compliance."
     ],
-    stack: ["Android (Kotlin/Java)", "PHP Laravel API", "MySQL", "REST API", "Gradle"],
+    stack: ["Android (Kotlin/Java)", "PHP Laravel REST API", "MySQL Database", "JSON Web Services", "Gradle"],
     repoName: "AplikasiUsmSima",
     githubUrl: "https://github.com/ferdinurul23/AplikasiUsmSima"
   },
   presensi_doskar: {
-    title: "Aplikasi USM Presensi & Kinerja Doskar",
-    subtitle: "Sistem Presensi Geofencing GPS & Log Kinerja Dosen / Karyawan USM",
+    title: "USM Attendance & Faculty Performance App",
+    subtitle: "GPS Geofencing Mobile Attendance & Performance Tracking System",
     image: "assets/img/eoffice.jpg",
-    category: "Mobile & Enterprise",
-    description: "Aplikasi mobile presensi dan pelaporan kinerja harian Dosen dan Karyawan (Doskar) di lingkungan Universitas Semarang. Menggunakan verifikasi geofencing GPS dan foto presensi otomatis.",
+    category: "Mobile & Enterprise HR",
+    description: "Enterprise mobile workforce application designed for lecturers and staff (Doskar) at Universitas Semarang. Features location-aware GPS geofencing, real-time photo verification, and automated daily performance logbook submissions.",
     features: [
-      "Presensi masuk & pulang berbasis geofencing radius lokasi kampus USM.",
-      "Pencatatan dan pengajuan log kinerja harian serta laporan kepegawaian.",
-      "Workflow pengajuan izin, sakit, dan lembur secara real-time.",
-      "Integrasi notifikasi presensi dan dashboard verifikasi admin HRD."
+      "GPS Geofencing radius validation for automated clock-in/clock-out within campus bounds.",
+      "Daily activity logging and automated HR performance report generation.",
+      "Real-time leave request, sick leave, and overtime approval workflows.",
+      "Push notification integration and HR administrative oversight dashboard."
     ],
-    stack: ["Android Studio", "Kotlin", "Geofencing GPS API", "PHP Laravel API", "MySQL"],
+    stack: ["Android Studio", "Kotlin", "Google Location Services API", "Laravel API Engine", "MySQL"],
     repoName: "AplikasiUsmPresensiKinerjaDoskar",
     githubUrl: "https://github.com/ferdinurul23/AplikasiUsmPresensiKinerjaDoskar"
   },
   usm_eksekutif: {
-    title: "Aplikasi USM Eksekutif",
-    subtitle: "Dashboard Executive Information System Rektorat USM",
+    title: "USM Executive Analytics Dashboard",
+    subtitle: "Executive Information System (EIS) for University Leadership",
     image: "assets/img/inventory.jpg",
-    category: "Mobile & Executive Dashboard",
-    description: "Aplikasi mobile dashboard untuk jajaran pimpinan dan rektorat Universitas Semarang guna memantau indikator kinerja utama (KPI) universitas, statistik pendaftaran mahasiswa, grafik IPK, dan data kepegawaian.",
+    category: "Mobile & Executive Analytics",
+    description: "Executive mobile dashboard empowering university chancellors and board members with real-time key performance indicators (KPIs), student enrollment growth analytics, GPA distributions, and faculty productivity metrics.",
     features: [
-      "Visualisasi analitik grafik pendaftaran & pertumbuhan mahasiswa baru.",
-      "Ringkasan statistik IPK per fakultas/program studi secara real-time.",
-      "Monitoring performa kehadiran dan kinerja dosen/karyawan.",
-      "Format tampilan dashboard eksklusif dengan keamanan tinggi."
+      "Real-time visual data analytics for new student enrollment and growth trends.",
+      "GPA distribution statistics broken down by faculty and academic departments.",
+      "Faculty attendance performance and institutional productivity metrics.",
+      "High-security encrypted data transmission designed for executive access."
     ],
-    stack: ["Android Kotlin", "RESTful API Backend", "Chart Engine", "JSON API"],
+    stack: ["Android (Kotlin)", "RESTful API Backend", "Chart Analytics Engine", "JSON Data Engine"],
     repoName: "AplikasiUsmEksekutif",
     githubUrl: "https://github.com/ferdinurul23/AplikasiUsmEksekutif"
   },
   tracer_backend: {
-    title: "Tracer Study Backend API System",
-    subtitle: "RESTful API Engine Pelacakan Alumni & Akreditasi Kampus",
+    title: "Tracer Study Backend API Engine",
+    subtitle: "High-Performance RESTful API for Alumni Tracking & University Accreditation",
     image: "assets/img/rest_api.jpg",
     category: "Backend & API Architecture",
-    description: "Sistem backend API untuk platform Tracer Study Universitas Semarang. Berfungsi mengelola survei penelusuran alumni, riwayat pekerjaan lulusan, serta menghasilkan data pendukung akreditasi perguruan tinggi.",
+    description: "Architected and built the backend API system for the Universitas Semarang Alumni Tracer Study platform. Manages graduate survey data collection, employment metrics, and generates institutional accreditation compliance reports.",
     features: [
-      "Autentikasi API aman berbasis Laravel Sanctum & token management.",
-      "Modul kuesioner dinamis untuk pengumpulan umpan balik alumni & pengguna lulusan.",
-      "Export data rekapitulasi statistik dalam format JSON & Excel.",
-      "Struktur database terindeks untuk query responsif."
+      "Secure authentication using Laravel Sanctum and token management.",
+      "Dynamic questionnaire engine for graduate and employer feedback collection.",
+      "Automated statistics aggregation and reporting in JSON and Excel formats.",
+      "Optimized database indexing ensuring fast query responses under high loads."
     ],
-    stack: ["PHP 8.x", "Laravel", "Laravel Sanctum", "MySQL Database", "Postman Collection"],
+    stack: ["PHP 8.x", "Laravel Framework", "Laravel Sanctum", "MySQL Database", "Postman Documentation"],
     repoName: "tracer_backend",
     githubUrl: "https://github.com/ferdinurul23/tracer_backend"
   },
   acarain: {
-    title: "Acarain Web Event Portal",
-    subtitle: "Platform Manajemen Event & Registrasi Tiket Berbasis Web",
+    title: "Acarain Web Event & Ticketing Portal",
+    subtitle: "Full-Stack Event Management Platform Built with Laravel",
     image: "assets/img/siakad.jpg",
     category: "Web Application",
-    description: "Sistem informasi pengelolaan kegiatan dan webinar (*event management*) berbasis Laravel. Memungkinkan penyelenggara memublikasikan acara, pendaftaran peserta online, serta penerbitan e-ticket.",
+    description: "A comprehensive event management web platform enabling event organizers to publish events, manage online attendee registrations, process ticket bookings, and automatically issue digital e-tickets.",
     features: [
-      "Katalog event interaktif dengan pencarian dan filter kategori.",
-      "Formulir pendaftaran peserta & verifikasi pembayaran tiket.",
-      "Generator e-ticket dan sertifikat otomatis.",
-      "Dashboard admin manajemen peserta dan statistik penjualan tiket."
+      "Interactive event discovery catalog with real-time category filtering and search.",
+      "Online participant registration form with payment verification integration.",
+      "Automated e-ticket generation and digital certificate issuance.",
+      "Admin control panel for attendee tracking and ticket analytics."
     ],
-    stack: ["Laravel Framework", "MySQL", "Webpack Mix", "Bootstrap", "Blade"],
+    stack: ["Laravel Framework", "MySQL Database", "Webpack Mix", "Bootstrap", "Blade Engine"],
     repoName: "acarainweb",
     githubUrl: "https://github.com/ferdinurul23/acarainweb"
   },
   ucac_jobs: {
     title: "UCAC Career & Job Placement Portal",
-    subtitle: "Portal Lowongan Kerja USM Career & Alumni Center",
+    subtitle: "Campus Recruitment & Alumni Employment Platform",
     image: "assets/img/eoffice.jpg",
     category: "Web Application & Career",
-    description: "Portal karir dan rekrutmen khusus lulusan Universitas Semarang di bawah naungan USM Career & Alumni Center (UCAC). Memfasilitasi perusahaan mitra memposting lowongan dan alumni melamar kerja.",
+    description: "Official career and job placement web portal for USM Career & Alumni Center (UCAC). Connects corporate hiring partners with university graduates for job vacancies and internship programs.",
     features: [
-      "Portal pendaftaran perusahaan mitra & posting lowongan kerja.",
-      "Modul lamaran online & unggah CV bagi alumni USM.",
-      "Notifikasi informasi rekrutmen kampus & jadwal interview.",
-      "Dashboard pengelolaan data pelamar untuk tim UCAC."
+      "Employer partner portal for publishing job openings and internship listings.",
+      "Online job application workflow with automated CV submission for alumni.",
+      "Campus hiring event notifications and interview scheduling system.",
+      "Applicant tracking dashboard for the UCAC career development team."
     ],
     stack: ["Laravel", "PHP", "MySQL", "Bootstrap UI"],
     repoName: "ucac_jobs",
     githubUrl: "https://github.com/ferdinurul23/ucac_jobs"
   },
   presensi_dpu: {
-    title: "Presensi Kerja DPU & Pemilu",
-    subtitle: "Aplikasi Monitoring Kehadiran Petugas Lapangan",
+    title: "DPU & Election Field Attendance System",
+    subtitle: "Location-Aware Mobile Attendance App for Field Operations",
     image: "assets/img/inventory.jpg",
-    category: "Mobile & Field Operations",
-    description: "Aplikasi presensi dan pemantauan kehadiran kerja berbasis lokasi untuk petugas dinas pekerjaan umum (DPU) dan tim operasional pemilu di lapangan.",
+    category: "Mobile Operations",
+    description: "Mobile attendance tracking solution designed for field workers at the Public Works Department (DPU) and election operational personnel. Utilizes location verification and photo capturing.",
     features: [
-      "Presensi lokasi GPS dengan verifikasi foto snapshot lapangan.",
-      "Pencatatan lokasi penugasan dan riwayat presensi harian.",
-      "Offline sync buffer saat terkendala jaringan internet."
+      "GPS location tracking paired with camera photo snapshot verification.",
+      "Field task assignment logging and daily attendance record history.",
+      "Offline data buffer mechanism ensuring seamless operation in low-connectivity areas."
     ],
-    stack: ["Android Studio", "Java/Kotlin", "Location Services GPS", "REST API"],
+    stack: ["Android Studio", "Java / Kotlin", "Google Location Services API", "REST API"],
     repoName: "PresensiKerjaDpu",
     githubUrl: "https://github.com/ferdinurul23/PresensiKerjaDpu"
   },
   madeinblora: {
-    title: "Made in Blora App",
-    subtitle: "Aplikasi Mobile Katalog & Promotional Showcase UMKM Blora",
+    title: "Made in Blora SME Mobile Showcase",
+    subtitle: "Digital Catalog Mobile App for Local Blora MSME Products",
     image: "assets/img/rest_api.jpg",
     category: "Mobile Application",
-    description: "Aplikasi mobile showcase dan katalog produk lokal karya UMKM Kabupaten Blora untuk memperluas jangkauan pemasaran produk daerah secara digital.",
+    description: "Mobile catalog application designed to showcase and promote local MSME products from the Blora region, expanding digital market reach for local artisans and entrepreneurs.",
     features: [
-      "Katalog produk kerajinan & kuliner khas Blora dengan foto berkategori.",
-      "Informasi kontak langsung ke penjual/pengrajin lokal via WhatsApp.",
-      "Tampilan UI responsif dan ringan digunakan di berbagai perangkat Android."
+      "Categorized product catalog showcasing local handicrafts, textiles, and culinary items.",
+      "Direct WhatsApp integration connecting buyers straight to local business owners.",
+      "Fluid, lightweight mobile UI optimized for smooth performance on all Android devices."
     ],
-    stack: ["Android (Java/Kotlin)", "REST API", "JSON Data"],
+    stack: ["Android (Java/Kotlin)", "REST API", "JSON Data Engine"],
     repoName: "madeinbloraApp",
     githubUrl: "https://github.com/ferdinurul23/madeinbloraApp"
   }
@@ -366,7 +367,7 @@ function initContactForm() {
       e.preventDefault();
       const name = document.getElementById('contact-name').value;
       
-      showSnackbar(`Terima kasih ${name}! Pesan Anda telah berhasil terkirim.`);
+      showSnackbar(`Thank you, ${name}! Your message has been sent successfully.`);
       form.reset();
     });
   }
@@ -374,7 +375,7 @@ function initContactForm() {
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', () => {
       navigator.clipboard.writeText('ferdinurul23@gmail.com').then(() => {
-        showSnackbar('Email ferdinurul23@gmail.com disalin ke clipboard!');
+        showSnackbar('Email address ferdinurul23@gmail.com copied to clipboard!');
       });
     });
   }
