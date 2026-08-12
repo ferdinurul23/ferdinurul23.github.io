@@ -23,93 +23,104 @@
 </head>
 <body>
 
+  <!-- M3 TOP APP BAR (PINNED HEADER) -->
+  <header id="top-app-bar" class="md-top-app-bar">
+    <div class="container top-bar-container">
+      <a href="#" class="brand-logo md-ripple">
+        <div class="logo-avatar">FN</div>
+        <span>Ferdi Nurul</span>
+      </a>
+
+      <!-- Action Buttons (Theme Toggle & Dynamic Color Picker) -->
+      <div class="top-actions">
+        <button id="palette-btn" class="icon-btn md-ripple" title="Pilih Tema Warna Material You" aria-label="Pilih Tema Warna">
+          <span class="material-symbols-outlined">palette</span>
+        </button>
+
+        <!-- Dynamic Color Popover Menu -->
+        <div id="palette-popover" class="palette-popover">
+          <button class="palette-item md-ripple" data-palette-val="default">
+            <span class="color-dot" style="background: #0b57d0;"></span>
+            <span>Google Blue</span>
+          </button>
+          <button class="palette-item md-ripple" data-palette-val="teal">
+            <span class="color-dot" style="background: #006a60;"></span>
+            <span>Cyan Teal</span>
+          </button>
+          <button class="palette-item md-ripple" data-palette-val="emerald">
+            <span class="color-dot" style="background: #1b6c43;"></span>
+            <span>Emerald Green</span>
+          </button>
+          <button class="palette-item md-ripple" data-palette-val="purple">
+            <span class="color-dot" style="background: #6750a4;"></span>
+            <span>Royal Purple</span>
+          </button>
+          <button class="palette-item md-ripple" data-palette-val="amber">
+            <span class="color-dot" style="background: #7a5900;"></span>
+            <span>Warm Amber</span>
+          </button>
+        </div>
+
+        <button id="theme-toggle-btn" class="icon-btn md-ripple" title="Ganti Mode Gelap/Terang" aria-label="Ganti Mode Tema">
+          <span id="theme-toggle-icon" class="material-symbols-outlined">dark_mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
   <!-- ====================================================================
-       UNDER DEVELOPMENT / UNDER CONSTRUCTION VIEW
+       UNDER DEVELOPMENT VIEW (STRICT M3 SPECIFICATIONS)
        ==================================================================== -->
   <main class="developing-container">
     
-    <!-- Top Action Bar (Theme Toggle & Palette) -->
-    <div style="position: absolute; top: 24px; right: 24px; display: flex; gap: 8px; z-index: 10;">
-      <button id="palette-btn" class="icon-btn md-ripple" title="Pilih Tema Warna Material You" aria-label="Pilih Tema Warna">
-        <span class="material-symbols-outlined">palette</span>
-      </button>
-
-      <!-- Dynamic Color Popover Menu -->
-      <div id="palette-popover" class="palette-popover">
-        <button class="palette-item md-ripple" data-palette-val="default">
-          <span class="color-dot" style="background: #0b57d0;"></span>
-          <span>Google Blue</span>
-        </button>
-        <button class="palette-item md-ripple" data-palette-val="teal">
-          <span class="color-dot" style="background: #006a60;"></span>
-          <span>Cyan Teal</span>
-        </button>
-        <button class="palette-item md-ripple" data-palette-val="emerald">
-          <span class="color-dot" style="background: #1b6c43;"></span>
-          <span>Emerald Green</span>
-        </button>
-        <button class="palette-item md-ripple" data-palette-val="purple">
-          <span class="color-dot" style="background: #6750a4;"></span>
-          <span>Royal Purple</span>
-        </button>
-        <button class="palette-item md-ripple" data-palette-val="amber">
-          <span class="color-dot" style="background: #7a5900;"></span>
-          <span>Warm Amber</span>
-        </button>
-      </div>
-
-      <button id="theme-toggle-btn" class="icon-btn md-ripple" title="Ganti Mode Gelap/Terang" aria-label="Ganti Mode Tema">
-        <span id="theme-toggle-icon" class="material-symbols-outlined">dark_mode</span>
-      </button>
-    </div>
-
     <div class="developing-card">
       
-      <!-- Profile Picture (profile2.png) -->
+      <!-- Proportional M3 Profile Avatar (profile2.png) -->
       <div class="developing-avatar-box">
         <img src="assets/img/profile2.png" alt="Ferdi Nurul - Software Engineer" class="developing-avatar-img" />
       </div>
 
+      <!-- M3 Filter Chip / Status Badge -->
       <div class="developing-badge">
         <span class="pulse-dot"></span>
         <span>Website Under Development</span>
       </div>
 
-      <h1 class="md-display-medium" style="margin-bottom: 8px; color: var(--md-sys-color-on-surface);">
+      <h1 class="md-headline-large" style="margin-bottom: 6px; color: var(--md-sys-color-on-surface); font-size: 1.75rem;">
         Ferdi Nurul
       </h1>
 
-      <p class="md-title-medium" style="color: var(--md-sys-color-primary); margin-bottom: 20px; font-weight: 600;">
-        Software Engineer (Mobile & Backend Specialist)
+      <p class="md-title-medium" style="color: var(--md-sys-color-primary); margin-bottom: 16px; font-weight: 600; font-size: 1rem;">
+        Software Engineer (Mobile & Backend)
       </p>
 
-      <p class="md-body-medium" style="color: var(--md-sys-color-on-surface-variant); max-width: 440px; margin-bottom: 32px;">
-        Mohon maaf, situs web ini sedang dalam tahap perbaikan dan pembaruan sistem. Kami akan segera kembali dengan tampilan dan sistem portofolio yang baru.
+      <p class="md-body-medium" style="color: var(--md-sys-color-on-surface-variant); max-width: 400px; margin-bottom: 28px; font-size: 0.9375rem; line-height: 1.5;">
+        Mohon maaf, situs web ini sedang dalam tahap perbaikan dan pembaruan sistem. Kami akan segera kembali dengan tampilan portofolio baru.
       </p>
 
-      <!-- Progress Meter -->
-      <div style="width: 100%; max-width: 380px; margin-bottom: 36px;">
+      <!-- M3 Progress Indicator Bar -->
+      <div style="width: 100%; max-width: 340px; margin-bottom: 32px;">
         <div style="display: flex; justify-content: space-between; font-size: 0.8125rem; font-weight: 700; margin-bottom: 8px; color: var(--md-sys-color-on-surface-variant);">
-          <span>Development Progress</span>
+          <span>Development Status</span>
           <span style="color: var(--md-sys-color-primary);">In Progress</span>
         </div>
-        <div class="skill-progress-bg">
-          <div class="skill-progress-bar" style="width: 65%;"></div>
+        <div class="skill-progress-bg" style="height: 6px;">
+          <div class="skill-progress-bar" style="width: 70%;"></div>
         </div>
       </div>
 
-      <!-- Quick Contact & Social Links -->
+      <!-- Quick Contact & Social M3 Buttons -->
       <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
-        <a href="mailto:ferdinurul23@gmail.com" class="btn-m3 btn-m3-filled md-ripple">
-          <span class="material-symbols-outlined">mail</span>
+        <a href="mailto:ferdinurul23@gmail.com" class="btn-m3 btn-m3-filled md-ripple" style="height: 42px; padding: 0 20px; font-size: 0.875rem;">
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;">mail</span>
           <span>Email Saya</span>
         </a>
-        <a href="https://www.linkedin.com/in/ferdinurul/" target="_blank" class="btn-m3 btn-m3-tonal md-ripple" rel="noopener noreferrer">
-          <span class="material-symbols-outlined">link</span>
+        <a href="https://www.linkedin.com/in/ferdinurul/" target="_blank" class="btn-m3 btn-m3-tonal md-ripple" style="height: 42px; padding: 0 20px; font-size: 0.875rem;" rel="noopener noreferrer">
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;">link</span>
           <span>LinkedIn</span>
         </a>
-        <a href="https://github.com/ferdinurul23" target="_blank" class="btn-m3 btn-m3-outlined md-ripple" rel="noopener noreferrer">
-          <span class="material-symbols-outlined">code</span>
+        <a href="https://github.com/ferdinurul23" target="_blank" class="btn-m3 btn-m3-outlined md-ripple" style="height: 42px; padding: 0 20px; font-size: 0.875rem;" rel="noopener noreferrer">
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;">code</span>
           <span>GitHub</span>
         </a>
       </div>
@@ -137,7 +148,6 @@
   -->
   <!-- ==================================================================== -->
 
-  <!-- JavaScript Entry Point -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
