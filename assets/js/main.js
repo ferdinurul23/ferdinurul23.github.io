@@ -1,6 +1,6 @@
 /**
  * MATERIAL DESIGN 3 (M3) INTERACTION ENGINE
- * Ferdi Nurul - Web & Backend Engineer Portfolio
+ * Ferdi Nurul - Software Engineer (Mobile & Backend Specialist)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,7 +21,6 @@ function initThemeSystem() {
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
   const themeIcon = document.getElementById('theme-toggle-icon');
   
-  // Saved or system preference
   const savedTheme = localStorage.getItem('m3-theme') || 
     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
@@ -120,7 +119,6 @@ function initScrollEffects() {
   const fab = document.getElementById('scroll-top-fab');
 
   window.addEventListener('scroll', () => {
-    // Top Bar Scrolled State
     if (window.scrollY > 40) {
       topAppBar?.classList.add('scrolled');
       fab?.style.setProperty('display', 'flex');
@@ -129,7 +127,6 @@ function initScrollEffects() {
       fab?.style.setProperty('display', 'none');
     }
 
-    // Scrollspy Navigation
     let currentSection = '';
     sections.forEach(section => {
       const sectionTop = section.offsetTop - 100;
@@ -158,7 +155,6 @@ function initScrollEffects() {
    4. FILTER CHIPS (PROJECTS & SKILLS)
    -------------------------------------------------------------------------- */
 function initFilterChips() {
-  // Project Filtering
   const projectChips = document.querySelectorAll('.project-chip');
   const projectCards = document.querySelectorAll('.project-card');
 
@@ -182,72 +178,134 @@ function initFilterChips() {
 }
 
 /* --------------------------------------------------------------------------
-   5. PROJECT DETAILS MODAL DIALOG
+   5. REAL GITHUB REPOSITORY PROJECT DETAILS
    -------------------------------------------------------------------------- */
 const projectDetailsData = {
-  siakad: {
-    title: "Sistem Informasi Akademik & Portal Kampus (SIAKAD)",
-    subtitle: "Enterprise Academic Management System",
+  sima: {
+    title: "Aplikasi USM SIMA (Sistem Informasi Manajemen Akademik)",
+    subtitle: "Aplikasi Mobile & Web Portal Akademik Universitas Semarang",
     image: "assets/img/siakad.jpg",
-    category: "Backend & Academic System",
-    description: "Sistem Manajemen Akademik berbasis web yang dirancang untuk mengelola seluruh siklus akademik perguruan tinggi. Meliputi modul KRS/KHS, manajemen kurikulum RPS, penilaian otomatis, serta integrasi sinkronisasi data dengan Feeder Dikti.",
+    category: "Mobile & Sistem Kampus",
+    description: "Sistem Informasi Manajemen Akademik (SIMA) utama Universitas Semarang untuk memfasilitasi mahasiswa dan dosen dalam proses perkuliahan, pengisian KRS online, melihat KHS & Transkrip, serta jadwal ujian dan pengumuman kampus.",
     features: [
-      "Sinkronisasi data otomatis dengan web service Dikti/Kemdikbud via REST API.",
-      "Modul KRS & KHS interaktif dengan perhitungan IPK/IPS otomatis.",
-      "Role-Based Access Control (RBAC) untuk Dosen, Mahasiswa, dan Staff Admin.",
-      "Optimasi query database MySQL untuk menangani ribuan mahasiswa aktif saat masa KRS."
+      "Modul KRS & KHS online interaktif dengan perhitungan IPK otomatis.",
+      "Jadwal kuliah, lokasi ruang, serta notifikasi presensi perkuliahan real-time.",
+      "Arsitektur Mobile Android berbasis Kotlin & Java dengan komunikasi REST API.",
+      "Integrasi sistem otentikasi akun tunggal (SSO) civitas akademika USM."
     ],
-    stack: ["PHP 8.2", "Laravel 10", "MySQL", "REST API Feeder", "Bootstrap/Material UI", "Redis Cache"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/ferdinurul23"
+    stack: ["Android (Kotlin/Java)", "PHP Laravel API", "MySQL", "REST API", "Gradle"],
+    repoName: "AplikasiUsmSima",
+    githubUrl: "https://github.com/ferdinurul23/AplikasiUsmSima"
   },
-  rest_api: {
-    title: "High-Performance REST API Gateway",
-    subtitle: "Secure & Scalable Microservices API",
+  presensi_doskar: {
+    title: "Aplikasi USM Presensi & Kinerja Doskar",
+    subtitle: "Sistem Presensi Geofencing GPS & Log Kinerja Dosen / Karyawan USM",
+    image: "assets/img/eoffice.jpg",
+    category: "Mobile & Enterprise",
+    description: "Aplikasi mobile presensi dan pelaporan kinerja harian Dosen dan Karyawan (Doskar) di lingkungan Universitas Semarang. Menggunakan verifikasi geofencing GPS dan foto presensi otomatis.",
+    features: [
+      "Presensi masuk & pulang berbasis geofencing radius lokasi kampus USM.",
+      "Pencatatan dan pengajuan log kinerja harian serta laporan kepegawaian.",
+      "Workflow pengajuan izin, sakit, dan lembur secara real-time.",
+      "Integrasi notifikasi presensi dan dashboard verifikasi admin HRD."
+    ],
+    stack: ["Android Studio", "Kotlin", "Geofencing GPS API", "PHP Laravel API", "MySQL"],
+    repoName: "AplikasiUsmPresensiKinerjaDoskar",
+    githubUrl: "https://github.com/ferdinurul23/AplikasiUsmPresensiKinerjaDoskar"
+  },
+  usm_eksekutif: {
+    title: "Aplikasi USM Eksekutif",
+    subtitle: "Dashboard Executive Information System Rektorat USM",
+    image: "assets/img/inventory.jpg",
+    category: "Mobile & Executive Dashboard",
+    description: "Aplikasi mobile dashboard untuk jajaran pimpinan dan rektorat Universitas Semarang guna memantau indikator kinerja utama (KPI) universitas, statistik pendaftaran mahasiswa, grafik IPK, dan data kepegawaian.",
+    features: [
+      "Visualisasi analitik grafik pendaftaran & pertumbuhan mahasiswa baru.",
+      "Ringkasan statistik IPK per fakultas/program studi secara real-time.",
+      "Monitoring performa kehadiran dan kinerja dosen/karyawan.",
+      "Format tampilan dashboard eksklusif dengan keamanan tinggi."
+    ],
+    stack: ["Android Kotlin", "RESTful API Backend", "Chart Engine", "JSON API"],
+    repoName: "AplikasiUsmEksekutif",
+    githubUrl: "https://github.com/ferdinurul23/AplikasiUsmEksekutif"
+  },
+  tracer_backend: {
+    title: "Tracer Study Backend API System",
+    subtitle: "RESTful API Engine Pelacakan Alumni & Akreditasi Kampus",
     image: "assets/img/rest_api.jpg",
     category: "Backend & API Architecture",
-    description: "Arsitektur RESTful API performa tinggi untuk integrasi layanan antar-sistem. Dilengkapi dengan autentikasi berbasis JWT (JSON Web Tokens), rate limiting, logging terstruktur, dan validasi data ketat.",
+    description: "Sistem backend API untuk platform Tracer Study Universitas Semarang. Berfungsi mengelola survei penelusuran alumni, riwayat pekerjaan lulusan, serta menghasilkan data pendukung akreditasi perguruan tinggi.",
     features: [
-      "Autentikasi aman JWT & Refresh Token rotation.",
-      "Custom Rate Limiting & Throttling middleware untuk perlindungan DDoS.",
-      "Dokumentasi API interaktif berbasis OpenAPI/Swagger Specification.",
-      "Response time rata-rata di bawah 80ms dengan strategi caching Redis."
+      "Autentikasi API aman berbasis Laravel Sanctum & token management.",
+      "Modul kuesioner dinamis untuk pengumpulan umpan balik alumni & pengguna lulusan.",
+      "Export data rekapitulasi statistik dalam format JSON & Excel.",
+      "Struktur database terindeks untuk query responsif."
     ],
-    stack: ["Laravel REST API", "JWT Auth", "PostgreSQL", "Redis", "Swagger/OpenAPI", "Docker"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/ferdinurul23"
+    stack: ["PHP 8.x", "Laravel", "Laravel Sanctum", "MySQL Database", "Postman Collection"],
+    repoName: "tracer_backend",
+    githubUrl: "https://github.com/ferdinurul23/tracer_backend"
   },
-  inventory: {
-    title: "Dashboard Fleet & Inventory Monitoring",
-    subtitle: "Real-time Asset Tracking & Reporting Engine",
-    image: "assets/img/inventory.jpg",
-    category: "Enterprise Dashboard",
-    description: "Aplikasi manajemen stok dan armada logistik perusahaan. Menyediakan pemantauan stok barang masuk/keluar, peringatan otomatis stok kritis, serta generator laporan PDF/Excel interaktif.",
-    features: [
-      "Dashboard analytics visual dengan grafik real-time.",
-      "Modul ekspor laporan otomatis (PDF & Excel format).",
-      "Audit trail log pergerakan aset dan riwayat barang.",
-      "Integrasi scanner barcode / QR code web-based."
-    ],
-    stack: ["Laravel", "Vue.js", "MySQL", "Chart.js", "DOMPDF", "Bootstrap"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/ferdinurul23"
-  },
-  eoffice: {
-    title: "Smart Attendance & E-Office System",
-    subtitle: "Web-Based Geolocation Attendance & Leave Approval",
-    image: "assets/img/eoffice.jpg",
+  acarain: {
+    title: "Acarain Web Event Portal",
+    subtitle: "Platform Manajemen Event & Registrasi Tiket Berbasis Web",
+    image: "assets/img/siakad.jpg",
     category: "Web Application",
-    description: "Sistem presensi karyawan dan manajemen surat dinas berbasis web. Dilengkapi dengan validasi lokasi berbasis Geolocation GPS, foto selfie presensi, serta alur persetujuan (approval workflow) bertingkat.",
+    description: "Sistem informasi pengelolaan kegiatan dan webinar (*event management*) berbasis Laravel. Memungkinkan penyelenggara memublikasikan acara, pendaftaran peserta online, serta penerbitan e-ticket.",
     features: [
-      "Presensi berbasis radius lokasi (Geofencing GPS) dan bukti foto.",
-      "Workflow pengajuan izin, cuti, dan lembur secara real-time.",
-      "Notifikasi otomatis via Email & Telegram Bot API.",
-      "Laporan rekapitulasi kehadiran bulanan otomatis."
+      "Katalog event interaktif dengan pencarian dan filter kategori.",
+      "Formulir pendaftaran peserta & verifikasi pembayaran tiket.",
+      "Generator e-ticket dan sertifikat otomatis.",
+      "Dashboard admin manajemen peserta dan statistik penjualan tiket."
     ],
-    stack: ["PHP Laravel", "Leaflet JS Maps", "MySQL", "Telegram Bot API", "Tailwind CSS"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/ferdinurul23"
+    stack: ["Laravel Framework", "MySQL", "Webpack Mix", "Bootstrap", "Blade"],
+    repoName: "acarainweb",
+    githubUrl: "https://github.com/ferdinurul23/acarainweb"
+  },
+  ucac_jobs: {
+    title: "UCAC Career & Job Placement Portal",
+    subtitle: "Portal Lowongan Kerja USM Career & Alumni Center",
+    image: "assets/img/eoffice.jpg",
+    category: "Web Application & Career",
+    description: "Portal karir dan rekrutmen khusus lulusan Universitas Semarang di bawah naungan USM Career & Alumni Center (UCAC). Memfasilitasi perusahaan mitra memposting lowongan dan alumni melamar kerja.",
+    features: [
+      "Portal pendaftaran perusahaan mitra & posting lowongan kerja.",
+      "Modul lamaran online & unggah CV bagi alumni USM.",
+      "Notifikasi informasi rekrutmen kampus & jadwal interview.",
+      "Dashboard pengelolaan data pelamar untuk tim UCAC."
+    ],
+    stack: ["Laravel", "PHP", "MySQL", "Bootstrap UI"],
+    repoName: "ucac_jobs",
+    githubUrl: "https://github.com/ferdinurul23/ucac_jobs"
+  },
+  presensi_dpu: {
+    title: "Presensi Kerja DPU & Pemilu",
+    subtitle: "Aplikasi Monitoring Kehadiran Petugas Lapangan",
+    image: "assets/img/inventory.jpg",
+    category: "Mobile & Field Operations",
+    description: "Aplikasi presensi dan pemantauan kehadiran kerja berbasis lokasi untuk petugas dinas pekerjaan umum (DPU) dan tim operasional pemilu di lapangan.",
+    features: [
+      "Presensi lokasi GPS dengan verifikasi foto snapshot lapangan.",
+      "Pencatatan lokasi penugasan dan riwayat presensi harian.",
+      "Offline sync buffer saat terkendala jaringan internet."
+    ],
+    stack: ["Android Studio", "Java/Kotlin", "Location Services GPS", "REST API"],
+    repoName: "PresensiKerjaDpu",
+    githubUrl: "https://github.com/ferdinurul23/PresensiKerjaDpu"
+  },
+  madeinblora: {
+    title: "Made in Blora App",
+    subtitle: "Aplikasi Mobile Katalog & Promotional Showcase UMKM Blora",
+    image: "assets/img/rest_api.jpg",
+    category: "Mobile Application",
+    description: "Aplikasi mobile showcase dan katalog produk lokal karya UMKM Kabupaten Blora untuk memperluas jangkauan pemasaran produk daerah secara digital.",
+    features: [
+      "Katalog produk kerajinan & kuliner khas Blora dengan foto berkategori.",
+      "Informasi kontak langsung ke penjual/pengrajin lokal via WhatsApp.",
+      "Tampilan UI responsif dan ringan digunakan di berbagai perangkat Android."
+    ],
+    stack: ["Android (Java/Kotlin)", "REST API", "JSON Data"],
+    repoName: "madeinbloraApp",
+    githubUrl: "https://github.com/ferdinurul23/madeinbloraApp"
   }
 };
 
@@ -270,15 +328,12 @@ function initProjectModal() {
       document.getElementById('modal-subtitle').textContent = data.subtitle;
       document.getElementById('modal-desc').textContent = data.description;
 
-      // Features
       const featuresList = document.getElementById('modal-features');
       featuresList.innerHTML = data.features.map(f => `<li>${f}</li>`).join('');
 
-      // Tech Stack Tags
       const stackContainer = document.getElementById('modal-stack');
       stackContainer.innerHTML = data.stack.map(s => `<span class="tech-tag">${s}</span>`).join('');
 
-      // Github link
       document.getElementById('modal-github-link').href = data.githubUrl;
 
       modalScrim.classList.add('open');
@@ -310,7 +365,6 @@ function initContactForm() {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const name = document.getElementById('contact-name').value;
-      const email = document.getElementById('contact-email').value;
       
       showSnackbar(`Terima kasih ${name}! Pesan Anda telah berhasil terkirim.`);
       form.reset();
