@@ -1,0 +1,73 @@
+<!-- M3 TOP APP BAR & NAVIGATION -->
+<header id="top-app-bar" class="md-top-app-bar">
+  <div class="container top-bar-container">
+    <a href="#hero" class="brand-logo md-ripple">
+      <div class="logo-avatar">FN</div>
+      <span>Ferdi Nurul</span>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link md-ripple">About</a></li>
+        <li><a href="#skills" class="nav-link md-ripple">Skills</a></li>
+        <li><a href="#experience" class="nav-link md-ripple">Experience</a></li>
+        <li><a href="#projects" class="nav-link md-ripple">GitHub Repos</a></li>
+        <li><a href="#contact" class="nav-link md-ripple">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Action Buttons -->
+    <div class="top-actions">
+      <button id="palette-btn" class="icon-btn md-ripple" title="Select Material You Color Theme" aria-label="Select Material You Color Theme">
+        <span class="material-symbols-outlined">palette</span>
+      </button>
+
+      <!-- Dynamic Color Popover Menu -->
+      <div id="palette-popover" class="palette-popover">
+        <button class="palette-item md-ripple" data-palette-val="default">
+          <span class="color-dot" style="background: #0b57d0;"></span>
+          <span>Google Blue</span>
+        </button>
+        <button class="palette-item md-ripple" data-palette-val="teal">
+          <span class="color-dot" style="background: #006a60;"></span>
+          <span>Cyan Teal</span>
+        </button>
+        <button class="palette-item md-ripple" data-palette-val="emerald">
+          <span class="color-dot" style="background: #1b6c43;"></span>
+          <span>Emerald Green</span>
+        </button>
+        <button class="palette-item md-ripple" data-palette-val="purple">
+          <span class="color-dot" style="background: #6750a4;"></span>
+          <span>Royal Purple</span>
+        </button>
+        <button class="palette-item md-ripple" data-palette-val="amber">
+          <span class="color-dot" style="background: #7a5900;"></span>
+          <span>Warm Amber</span>
+        </button>
+      </div>
+
+      <button id="theme-toggle-btn" class="icon-btn md-ripple" title="Toggle Light/Dark Theme" aria-label="Toggle Theme Mode">
+        <span id="theme-toggle-icon" class="material-symbols-outlined">dark_mode</span>
+      </button>
+
+      <button id="mobile-drawer-toggle" class="icon-btn mobile-nav-toggle md-ripple" aria-label="Open Mobile Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobile-drawer-scrim" class="mobile-drawer-scrim"></div>
+<aside id="mobile-drawer" class="mobile-drawer">
+  <div class="brand-logo" style="margin-bottom: 16px;">
+    <div class="logo-avatar">FN</div>
+    <span>Ferdi Nurul</span>
+  </div>
+  <a href="#about" class="nav-link drawer-link md-ripple">About</a>
+  <a href="#skills" class="nav-link drawer-link md-ripple">Skills</a>
+  <a href="#experience" class="nav-link drawer-link md-ripple">Experience</a>
+  <a href="#projects" class="nav-link drawer-link md-ripple">GitHub Repos</a>
+  <a href="#contact" class="nav-link drawer-link md-ripple">Contact</a>
+</aside>

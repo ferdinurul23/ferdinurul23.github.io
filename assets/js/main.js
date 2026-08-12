@@ -1,10 +1,14 @@
 /**
- * MATERIAL DESIGN 3 (M3) INTERACTION ENGINE
+ * MATERIAL DESIGN 3 (M3) INTERACTION ENGINE & COMPONENT LOADER
  * Ferdi Nurul - Software Engineer (Mobile & Backend Specialist)
- * Professional English Edition
+ * Modular Component Architecture
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  // Step 1: Load all modular components asynchronously
+  await loadComponents();
+
+  // Step 2: Initialize Material Design 3 UI controllers
   initThemeSystem();
   initDynamicPalette();
   initRippleEffect();
@@ -14,6 +18,32 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initMobileDrawer();
 });
+
+/* --------------------------------------------------------------------------
+   0. MODULAR HTML COMPONENT LOADER
+   -------------------------------------------------------------------------- */
+async function loadComponents() {
+  const includeElements = document.querySelectorAll('[data-include]');
+  
+  const loadTasks = Array.from(includeElements).map(async (el) => {
+    const filePath = el.getAttribute('data-include');
+    if (!filePath) return;
+
+    try {
+      const response = await fetch(filePath);
+      if (response.ok) {
+        const html = await response.text();
+        el.outerHTML = html;
+      } else {
+        console.error(`Failed to load component: ${filePath} (Status ${response.status})`);
+      }
+    } catch (err) {
+      console.error(`Error fetching component ${filePath}:`, err);
+    }
+  });
+
+  await Promise.all(loadTasks);
+}
 
 /* --------------------------------------------------------------------------
    1. THEME & PALETTE MANAGERS
@@ -179,7 +209,7 @@ function initFilterChips() {
 }
 
 /* --------------------------------------------------------------------------
-   5. REAL GITHUB REPOSITORY PROJECT DETAILS (PROFESSIONAL ENGLISH)
+   5. REAL GITHUB REPOSITORY PROJECT DETAILS
    -------------------------------------------------------------------------- */
 const projectDetailsData = {
   sima: {
